@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2c1db162-fa3c-4f23-afc4-4a9f9850fd96" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/two_number_sum.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/two_number_sum.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +29,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "//wsl$/Ubuntu/home/cyphe/projects/courses/Algo_practice",
+    "last_opened_file_path": "//wsl$/Ubuntu/home/cyphe/projects/courses/data-structures-and-algorithms/python",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -85,7 +84,8 @@
       <workItem from="1674002651741" duration="1420000" />
       <workItem from="1674516459028" duration="320000" />
       <workItem from="1674516798382" duration="787000" />
-      <workItem from="1674517601195" duration="6667000" />
+      <workItem from="1674517601195" duration="9062000" />
+      <workItem from="1674530034252" duration="725000" />
     </task>
     <servers />
   </component>
