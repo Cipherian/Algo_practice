@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2c1db162-fa3c-4f23-afc4-4a9f9850fd96" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/calculate_branch_sums.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/calculate_branch_sums.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +87,7 @@
       <workItem from="1674516798382" duration="787000" />
       <workItem from="1674517601195" duration="9062000" />
       <workItem from="1674530034252" duration="725000" />
-      <workItem from="1675811435476" duration="1512000" />
+      <workItem from="1675811435476" duration="2388000" />
     </task>
     <servers />
   </component>
