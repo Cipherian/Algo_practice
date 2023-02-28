@@ -10,8 +10,8 @@ def total_waiting_time(queries: list[int]) -> int:
     queries.sort()  # sorts the queries in ascending order
     total_time = 0
     for i in range(len(queries)):
-        waiting_time = sum(queries[:i]) # summing up the waiting time of the first i elements
-        total_time += waiting_time # adding the waiting time to the total time
+        waiting_time = sum(queries[:i])  # summing up the waiting time of the first i elements
+        total_time += waiting_time  # adding the waiting time to the total time
     return total_time
 
 
