@@ -26,31 +26,21 @@ def three_number_sum(array, target_sum):
     array.sort()
     result = []
 
-    for i in range(len(array)-2):
-        if i > 0 and array[i] == array[i-1]:
-            continue
+    for i in range(len(array)):
         two_sum(array, i, result, target_sum)
-
     return result
 
 
 def two_sum(array, idx, result, target_sum):
     left, right = idx+1, len(array) - 1
     while left < right:
-        curr_sum = array[idx] + array[left] + array[right]
-        if curr_sum < target_sum:
+        if array[idx] + array[left] + array[right] < target_sum:
             left += 1
-        elif curr_sum > target_sum:
+        elif array[idx] + array[left] + array[right] > target_sum:
             right -= 1
         else:
             result.append([array[idx], array[left], array[right]])
-            while left < right and array[left] == array[left+1]:
-                left += 1
-            while left < right and array[right] == array[right-1]:
-                right -= 1
             left += 1
-            right -= 1
-
     return result
 
 """
