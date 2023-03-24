@@ -35,3 +35,4 @@ def longest_peak(arr):
 if __name__ == "__main__":
   print(longest_peak([1, 2, 4, 10, 2, 1, 0])) # 7
   print(longest_peak([1, -1, 2, 4])) # 0
+  print(longest_peak([ 0, 1, 0])) # 3
