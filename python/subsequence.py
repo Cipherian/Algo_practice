@@ -26,6 +26,7 @@ def is_subsequence(array, sequence):
 if __name__ == "__main__":
     print(is_subsequence([1, 2, 3, 4, 5], [1, 2, 3, 4, 5]))
     print(is_subsequence([1, 2, 3, 4,], [8, 8, 8, 8]))
+    print('test')
 
 
 
