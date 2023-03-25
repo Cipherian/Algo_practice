@@ -9,7 +9,7 @@ contained in the binary search tree.
 def find_closest_value(tree, target:int)-> int:
     """
     :param tree:
-    :param target: int
+    
     :return: int
     """
     closest = float('inf')
