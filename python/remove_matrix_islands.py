@@ -42,6 +42,13 @@ def traverse_islands(matrix, i, j, is_edge):
     if j < len(matrix[0]) - 1:
         traverse_islands(matrix, i, j + 1, is_edge)
 
+"""
+This function takes in a matrix as an input and removes any "islands" in the matrix. An island is defined as a group of connected 1's in the matrix that are not connected to the edge of the matrix. The function starts by iterating over the edge elements of the matrix (top, bottom, left, right) and calling the traverse_islands function on each of these elements, passing in True for the is_edge parameter. The traverse_islands function recursively traverses the matrix and changes the value of any 1's it encounters to a 2 if is_edge is True, or a 0 if is_edge is False.
+
+Next, the function iterates over the interior elements of the matrix (excluding the edges) and calls traverse_islands on each of these elements, passing in False for the is_edge parameter. This step ensures that any remaining islands in the interior of the matrix are also marked as 0's.
+
+Finally, the function iterates over the entire matrix and changes any remaining 2's to 1's. The updated matrix is then returned.
+"""
 
 class TestRemoveIslands(unittest.TestCase):
     def test_remove_islands(self):
