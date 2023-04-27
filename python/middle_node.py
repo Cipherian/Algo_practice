@@ -20,6 +20,13 @@ def middleNode(linkedList):
 
     return slow_ptr
 
+"""
+This code defines a class named LinkedList with a constructor (__init__) that initializes an instance of the class with a value attribute and a next attribute, which is initially set to None. This class is used to create linked lists, where each instance represents a node in the list.
+
+The second part of the code defines a function named middleNode that takes a linkedList parameter, which is an instance of the LinkedList class. The function finds the middle node of the linked list using a common algorithm known as the "tortoise and hare" algorithm. It uses two pointers, slow_ptr and fast_ptr, both initially set to linkedList. The fast_ptr moves two nodes at a time while the slow_ptr moves one node at a time. When the fast_ptr reaches the end of the list or goes past it, the slow_ptr will be pointing to the middle node.
+
+Finally, the middleNode function returns the slow_ptr, which points to the middle node of the linked list.
+"""
 
 class TestMiddleNode(unittest.TestCase):
     def setUp(self):
