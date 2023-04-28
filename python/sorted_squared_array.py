@@ -3,8 +3,9 @@ Write a function that takes in a non empty array of integers that are sorted in
 ascending order and returns a new array of the same length with the squares of the original integers also sorted in
 ascending order
 """
+import unittest
+
 # def sortedSquaredArray(array):
-#     # Write your code here.
 #     return sorted([idx**2 for idx in array])
 
 def sorted_squares(arr:list[int]) -> list[int]:
@@ -20,6 +21,10 @@ def sorted_squares(arr:list[int]) -> list[int]:
             right -= 1
     return result[::-1]
 
+class TestSortedSquares(unittest.TestCase):
+    def test_sorted_squares(self):
+        self.assertEqual(sorted_squares([1, 2, 3, 4, 5]), [1, 4, 9, 16, 25])
+        self.assertEqual(sorted_squares([1, 2, 5, 8, 9]), [1, 4, 25, 64, 81])
 """
 
 Starting with the pointer pointing to the first element and the last element in the array, 
@@ -32,5 +37,4 @@ compare the absolute value of the elements at each pointer and add the square of
 """
 
 if __name__ == "__main__":
-    print(sorted_squares([1, 2, 3, 4, 5]))
-    print(sorted_squares([1, 2, 5, 8, 9]))
+    unittest.main()
