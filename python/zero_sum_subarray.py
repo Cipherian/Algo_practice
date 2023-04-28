@@ -1,6 +1,7 @@
 """
 Write a function that takes in a list of integers and determines whether there is a sub array whose sum is equal to 0.
 """
+import unittest
 
 
 def sub_array_sum_zero(arr):
@@ -21,3 +22,13 @@ def sub_array_sum_zero(arr):
         seen.add(total)
     
     return False
+
+class TestSubArraySumZero(unittest.TestCase):
+    def test_sub_array_sum_zero(self):
+        self.assertFalse(sub_array_sum_zero([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
+        self.assertFalse(sub_array_sum_zero([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]))
+        self.assertTrue(sub_array_sum_zero([-4, 4, 0, 11]))
+
+
+if __name__ == '__main__':
+    unittest.main()
