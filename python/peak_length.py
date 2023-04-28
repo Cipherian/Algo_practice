@@ -3,6 +3,7 @@ Write a function that takes in an array and returns the length of the highest pe
 Example: [1, 2 , 4 , 10, 2, 1, 0] forms a peak.
 Example: [1, -1, 2, 4] there is no peak.
 """
+import unittest
 
 def longest_peak(arr):
     arr_len = len(arr)
@@ -31,8 +32,12 @@ def longest_peak(arr):
             i += 1
     return max_peak
 
+class TestLongestPeak(unittest.TestCase):
+    def test_longest_peak(self):
+        self.assertEqual(longest_peak([1, 2, 4, 10, 2, 1, 0]), 7)
+        self.assertEqual(longest_peak([1, -1, 2, 4]), 0)
+        self.assertEqual(longest_peak([ 0, 1, 0]), 3)
+
 
 if __name__ == "__main__":
-  print(longest_peak([1, 2, 4, 10, 2, 1, 0])) # 7
-  print(longest_peak([1, -1, 2, 4])) # 0
-  print(longest_peak([ 0, 1, 0])) # 3
+    unittest.main()
