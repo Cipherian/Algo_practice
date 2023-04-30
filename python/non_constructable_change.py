@@ -5,6 +5,7 @@ unique.
 For example, if you're given coins = [1,2,5], the minimum amount of change that you can't create is 4, if you're given no
 coins, the minimum amount of change that you can't create is 1.
 """
+import unittest
 
 def min_constant_change(coins):
     coins.sort()
@@ -17,10 +18,13 @@ def min_constant_change(coins):
     return current_change + 1
 
 
+class Test(unittest.TestCase):
+    def test(self):
+        self.assertEqual(min_constant_change([1, 2, 5]), 4)
+        self.assertEqual(min_constant_change([100]), 1)
+        self.assertEqual(min_constant_change([1, 2, 5, 10, 20]), 4)
+        self.assertEqual(min_constant_change([1, 2, 5, 10, 20, 50]), 4)
+
+
 if __name__ == "__main__":
-    print(min_constant_change([1, 2, 5]))
-    print(min_constant_change([100]))
-    print(min_constant_change([1, 2, 5, 10, 20]))
-    print(min_constant_change([1, 2, 5, 10, 20, 50]))
-    print(min_constant_change([1, 2, 33, 10, 20, 50, 100]))
-    print(min_constant_change([1, 2, 5, 10, 20, 50, 100, 200]))
+    unittest.main()
