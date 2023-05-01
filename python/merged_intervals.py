@@ -2,6 +2,7 @@
 Write a function that takes in a nested list of intervals and merges any overlapping intervals.
 Sample input [[1, 2], [2, 5], [6, 7]] output: [[1, 5], [6, 7]]
 """
+import unittest
 
 def merge_intervals(intervals):
     """
@@ -20,6 +21,11 @@ def merge_intervals(intervals):
     merged_intervals.append(current_interval)
     return merged_intervals
 
+class TestMergeIntervals(unittest.TestCase):
+    def test_merge_intervals(self):
+        self.assertEqual(merge_intervals([[1, 2], [2, 5], [6, 7]]), [[1, 5], [6, 7]])
+        self.assertEqual(merge_intervals([[1, 2], [2, 5], [6, 7], [7, 10]]), [[1, 5], [6, 10]])
+
 """
 The function merge_intervals takes a list of intervals represented as lists of two integers and returns a new list of merged intervals where overlapping intervals are combined into a single interval.
 
@@ -32,7 +38,6 @@ The function then loops through the remaining intervals in the list and checks i
 Finally, the last interval is added to the merged_intervals list and the merged list is returned.
 """
 if __name__ == '__main__':
-    print(merge_intervals([[1, 2], [2, 5], [6, 7]])) # [[1, 5], [6, 7]]
-    print(merge_intervals([[1, 2], [2, 5], [6, 7], [7, 10]])) # [[1, 5], [6, 10]
+    unittest.main()
 
 
