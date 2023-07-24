@@ -9,6 +9,7 @@ where a 1 in the results array means that the home team in the corresponding com
 It's guaranteed that exactly one team will win the tournament and that each team will compete against all other teams
 exactly once. Each tournament will have at least two teams.
 """
+import unittest
 
 def tournament_winner(competitions, results):
     """
@@ -31,8 +32,21 @@ def tournament_winner(competitions, results):
     winner = max(teams, key=teams.get)
     return winner
 
+class TestTournamentWinner(unittest.TestCase):
+    def test_tournament_winner(self):
+        self.assertEqual(tournament_winner([[1, 2], [3, 4]], [[1, 0], [0, 1]]), 2)
+        self.assertEqual(tournament_winner([[1, 2], [3, 4]], [[1, 0], [1, 0]]), 2)
+        self.assertEqual(tournament_winner([[1, 2], [3, 4]], [[0, 1], [1, 0]]), 2)
+        self.assertEqual(tournament_winner([[1, 2], [3, 4]], [[0, 1], [0, 1]]), 2)
+        self.assertEqual(tournament_winner([[1, 2], [3, 4]], [[0, 1], [1, 1]]), 2)
+
+
+
 """
 It iterates through the competitions and results arrays to update the number of wins for each team. Then it uses 
 the max() function with the key parameter set to the teams.get method to find the team with the most wins and returns
  that team's name as the tournament winner.
 """
+
+if __name__ == '__main__':
+    unittest.main()
