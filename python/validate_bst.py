@@ -1,6 +1,7 @@
 """
 Write a function that takes in a binary search tree and validates whether it is a valid binary search tree.
 """
+import unittest
 
 class BST:
     def __init__(self, value=float("inf"), left=None, right=None):
@@ -39,23 +40,28 @@ def validate_bst(root, left_parent=float('-inf'), right_parent=float('inf')):
 
     return False
 
+class TestValidateBST(unittest.TestCase):
+    def test_validate_bst(self):
+        bst = BST()
+        bst.insert(10)
+        bst.insert(5)
+        bst.insert(10)
+        bst.insert(15)
+        bst.insert(20)
+        bst.insert(30)
+    
+        self.assertFalse(validate_bst(bst))
+    
+    def test_validate_bst_2(self):
+        bst = BST()
+        bst.insert(5)
+        bst.insert(10)
+        bst.insert(15)
+        bst.insert(20)
+        bst.insert(30)
+
+        self.assertTrue(validate_bst(bst))
 
 if __name__ == '__main__':
-    bs = BST()
-    bs.insert(10)
-    bs.insert(5)
-    bs.insert(10)
-    bs.insert(15)
-    bs.insert(20)
-    bs.insert(30)
-
-    print(validate_bst(bs)) # False
-
-    bs2 = BST()
-    bs2.insert(5)
-    bs2.insert(10)
-    bs2.insert(15)
-    bs2.insert(20)
-    bs2.insert(30)
-
-    print(validate_bst(bs2)) # True
+    unittest.main()
+    
