@@ -18,6 +18,8 @@ class TestTotalWaitingTime(unittest.TestCase):
     def test_total_waiting_time(self):
         self.assertEqual(total_waiting_time([1, 4, 5]), 6)
         self.assertEqual(total_waiting_time([1, 3, 4]), 5)
+        self.assertNotEqual(total_waiting_time([1, 2, 3, 4]), 11)
+        self.assertGreater(total_waiting_time([1, 2, 3, 4]), 0)
 
 if __name__ == "__main__":
     unittest.main()
