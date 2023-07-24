@@ -5,6 +5,7 @@ Sample Input:
 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 15
 Sample Output: [[ 2, 3 , 10], [6, 4, 5]]
 """
+import unittest
 
 
 def find_triplets(nums: list[int], target: int) -> list[list[int]]:
@@ -48,6 +49,12 @@ Three number sum uses pointers and is more efficient
 Time Complexity: O(n^2)
 """
 
+class test_three_number_sum(unittest.TestCase):
+    def test_three_number_sum(self):
+        self.assertEqual(three_number_sum([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 15), [[1, 4, 10], [1, 5, 9], [1, 6, 8], [2, 3, 10], [2, 4, 9], [2, 5, 8], [2, 6, 7], [3, 4, 8], [3, 5, 7], [4, 5, 6]])
+        self.assertEqual(find_triplets([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 15), [[1, 4, 10], [1, 5, 9], [1, 6, 8], [2, 3, 10], [2, 4, 9], [2, 5, 8], [2, 6, 7], [3, 4, 8], [3, 5, 7], [4, 5, 6]])
+
+
+
 if __name__ == '__main__':
-    print(find_triplets([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 15))
-    print(three_number_sum([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 15))
+    unittest.main()
