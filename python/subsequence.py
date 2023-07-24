@@ -2,6 +2,7 @@
 Given two non empty arrays of integers write a function that determines whether
 the second array is a subsequence of the first one.
 """
+import unittest
 
 
 def is_subsequence(array, sequence):
@@ -22,11 +23,15 @@ def is_subsequence(array, sequence):
         i += 1
     return j == len(sequence)
 
+class Test(unittest.TestCase):
+    def test_is_subsequence(self):
+        self.assertEqual(is_subsequence([1, 2, 3, 4, 5], [1, 2, 3, 4, 5]), True)
+        self.assertEqual(is_subsequence([1, 2, 3, 4, 5], [1, 2, 3, 4, 6]), False)
+        self.assertEqual(is_subsequence([1, 2, 3, 4, 5], [1, 2, 3, 4, 5, 6]), False)
+        self.assertEqual(is_subsequence([1, 2, 3, 4, 5], [1, 2, 3, 4, 5, 6, 7]), False)
 
 if __name__ == "__main__":
-    print(is_subsequence([1, 2, 3, 4, 5], [1, 2, 3, 4, 5]))
-    print(is_subsequence([1, 2, 3, 4,], [8, 8, 8, 8]))
-    print('test')
+    unittest.main()
 
 
 
